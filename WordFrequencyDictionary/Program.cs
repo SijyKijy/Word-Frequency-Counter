@@ -18,8 +18,8 @@ ITextReaderProvider textReaderProvider = new FileTextReaderProvider(inputFilePat
 ITextWriterProvider textWriterProvider = new FileTextWriterProvider(outputFilePath);
 IWordCounter parallelWordCounter = new ParallelWordCounter(textReaderProvider);
 
+Console.WriteLine("Processing started");
 Process(textWriterProvider, parallelWordCounter);
-
 Console.WriteLine("Done");
 
 static void Process(ITextWriterProvider textWriter, IWordCounter wordCounter)
