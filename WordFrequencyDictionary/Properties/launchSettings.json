@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WordFrequencyDictionary": {
+      "commandName": "Project",
+      "commandLineArgs": ".\\large.txt .\\result.txt"
+    }
+  }
+}
