@@ -1,5 +1,8 @@
 ﻿namespace WordFrequencyDictionary.Services;
 
+/// <summary>
+///     Represent provider to retrieve strings from text file
+/// </summary>
 public sealed class FileTextReaderProvider : ITextReaderProvider
 {
     private readonly string _filePath;

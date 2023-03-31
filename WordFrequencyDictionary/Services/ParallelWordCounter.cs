@@ -3,6 +3,9 @@ using WordFrequencyDictionary.Models;
 
 namespace WordFrequencyDictionary.Services;
 
+/// <summary>
+///     Represents a parallel version <see cref="IWordCounter"/>
+/// </summary>
 public sealed class ParallelWordCounter : IWordCounter
 {
     private readonly ITextReaderProvider _textReaderProvider;

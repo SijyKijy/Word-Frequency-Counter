@@ -1,5 +1,8 @@
 ﻿namespace WordFrequencyDictionary.Services;
 
+/// <summary>
+///     Represents a simple version <see cref="IWordCounter"/>
+/// </summary>
 public sealed class WordCounter : IWordCounter
 {
     private readonly ITextReaderProvider _textProvider;

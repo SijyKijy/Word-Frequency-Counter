@@ -2,6 +2,9 @@
 
 namespace WordFrequencyDictionary.Services;
 
+/// <summary>
+///     Represent provider to write words into a text file
+/// </summary>
 public sealed class FileTextWriterProvider : ITextWriterProvider
 {
     private readonly string _filePath;
