@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using WordFrequencyDictionary.Services;
+﻿using WordFrequencyDictionary.Services;
 
 if (args.Length != 2)
 {
@@ -35,27 +34,4 @@ static void Process(ITextWriterProvider textWriter, IWordCounter wordCounter)
 
     Console.WriteLine($"Found {words.Count} words");
     textWriter.Write(words.OrderByDescending(k => k.Value));
-}
-
-static void ProcessWithStopWatch(ITextWriterProvider textWriter, IWordCounter wordCounter)
-{
-    Stopwatch stopwatch = new();
-
-    stopwatch.Start();
-    var words = wordCounter.GetWords();
-    stopwatch.Stop();
-
-    if (words.Count == 0)
-    {
-        Console.WriteLine("Words not found.");
-        return;
-    }
-
-    Console.WriteLine($"Found {words.Count} words | {stopwatch.Elapsed}");
-    stopwatch.Reset();
-
-    stopwatch.Start();
-    textWriter.Write(words.OrderByDescending(k => k.Value));
-    stopwatch.Stop();
-    Console.WriteLine($"Write and order | {stopwatch.Elapsed}");
 }

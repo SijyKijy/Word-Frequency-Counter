@@ -1,6 +1,4 @@
-﻿using WordFrequencyDictionary.Models;
-
-namespace WordFrequencyDictionary.Services;
+﻿namespace WordFrequencyDictionary.Services;
 
 public interface IWordCounter
 {
